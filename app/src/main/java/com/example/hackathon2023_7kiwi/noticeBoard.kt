@@ -2,59 +2,73 @@ package com.example.hackathon2023_7kiwi
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.LayoutInflater
 import android.view.ViewGroup
-import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.RecyclerView.ViewHolder
 import com.example.hackathon2023_7kiwi.databinding.ActivityNoticeBoardBinding
 import com.example.hackathon2023_7kiwi.databinding.ItemMainBinding
 
+val dataList = mutableListOf<Datum>()
+
 class noticeBoard : AppCompatActivity() {
 
-    val binding by lazy { ActivityNoticeBoardBinding.inflate(layoutInflater) }
-    val binding1 by lazy { ItemMainBinding.inflate(layoutInflater) }
+    private val binding by lazy { ActivityNoticeBoardBinding.inflate(layoutInflater) }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_notice_board)
         setContentView(binding.root)
-        supportActionBar?.setTitle("Title")
+        //supportActionBar?.setTitle("Title")
 
-        val datas = mutableListOf<String>()
+        var data: Datum
+        //val dataList = mutableListOf<Datum>()
         for (i in 1..10) {
-            datas.add("item $i")
+            data = Datum("$i", "title $i", "content $i")
+            dataList.add(i, data)
         }
+        /*val a = Datum("0", "title 0", "content 0")
+        dataList.add(0, a)*/
 
-        binding.noticeBoard.LayoutManager = LinearLayoutManager(this)
-        binding.noticeBoard.adapter = MyAdapter(datas)
-        binding.noticeBoard.addItemDecoration(DividerItemDecoration(this,
-            LinearLayoutManager.VERTICAL))
-    }
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder =
-        MyAdapter.MyViewHolder(ItemMainBinding.inflate(layoutInflater.from(parent.context), parent, false))
-    override fun getItemCount(): Int = datas.size
-    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        Log.d("kkang", "onBindViewHolder : $position")
-        val binding = (holder as MyAdapter.MyViewHolder).binding
+        //printRecycler(dataList)
 
-        binding1.itemData.text = datas[position]
-
-        binding1.itemRoot
+        //fun printRecycler(dataList: MutableList<Datum>) {
+            // 1. 데이터를 불러온다
+            //val data = dataList
+            // 2. adapter 를 생성
+            val customAdapter = CustomAdapter(dataList)
+            // 3. 화면의 RecyclerView 와 연결
+            binding.recyclerView.adapter = customAdapter
+            // 4. 레이아웃 매니저 설정
+            binding.recyclerView.layoutManager = LinearLayoutManager(this)
+        //}
     }
 }
 
-class MyAdapter(val datas: MutableList<String>): RecyclerView.Adapter<RecyclerView.ViewHolder>() {
-    class MyViewHolder(val binding: ItemMainBinding): RecyclerView.ViewHolder(binding.root)
+class CustomAdapter(private val dataList: MutableList<Datum>) : RecyclerView.Adapter<CustomAdapter.Holder>() {
 
-    override fun getItemCount(): Int {
-        TODO("Not yet implemented")
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): Holder {
+        val binding = ItemMainBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+        return Holder(binding)
     }
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
-        TODO("Not yet implemented")
+    override fun onBindViewHolder(holder: Holder, position: Int) {
+        // 1. 사용할 데이터를 꺼내고
+        val datum = dataList[position]
+        // 2. 홀더에 데이터를 전달
+        holder.setTry(datum)
     }
 
-    override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
-        TODO("Not yet implemented")
+    override fun getItemCount() = dataList.size
+
+    class Holder(val binding: ItemMainBinding) : ViewHolder(binding.root) {
+        // 3. 받은 데이터를 화면에 출력한다.
+        fun setTry(datum: Datum) {
+            with(binding){
+                index.text = datum.index
+                itemTitle.text = datum.titles
+                itemContent.text = datum.contents
+            }
+        }
     }
 }
