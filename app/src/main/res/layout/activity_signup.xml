@@ -1,9 +1,229 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".signupActivity">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal"
+            android:baselineAligned="true" >
+
+            <Button
+                android:id="@+id/back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="back"
+                android:textColor="@color/white"
+                android:textSize="20dp" />
+
+            <TextView
+                android:id="@+id/signup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="            회원가입"
+                android:textColor="@color/design_default_color_primary_variant"
+                android:textSize="25dp"
+                app:layout_constraintRight_toLeftOf="@id/back"
+                tools:ignore="MissingConstraints" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="1dp"
+                android:text="이름"
+                android:textColor="@color/design_default_color_primary_variant"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                app:layout_constraintTop_toBottomOf="@id/signup" />
+
+            <EditText
+                android:id="@+id/input_name"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:layout_marginBottom="25dp"
+                android:ems="10"
+                android:hint="이름"
+                android:inputType="textPersonName"
+                android:text=""
+                app:layout_constrainTop_toBottomOf="@id/name" />
+
+            <TextView
+                android:id="@+id/birth"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="1dp"
+                android:text="생년월일"
+                android:textColor="@color/design_default_color_primary_variant"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                app:layout_constraintTop_toBottomOf="@id/input_name" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/year"
+                    android:layout_width="100dp"
+                    android:layout_height="48dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="20dp"
+                    android:ems="10"
+                    android:hint="년(4자)"
+                    android:inputType="textPersonName"
+                    android:text=""
+                    app:layout_constraintTop_toBottomOf="@id/birth" />
+
+                <EditText
+                    android:id="@+id/month"
+                    android:layout_width="100dp"
+                    android:layout_height="48dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="20dp"
+                    android:ems="10"
+                    android:hint="월"
+                    android:inputType="textPersonName"
+                    android:text=""
+                    app:layout_constraintRight_toRightOf="@id/year"
+                    app:layout_constraintTop_toBottomOf="@id/birth" />
+
+                <EditText
+                    android:id="@+id/day"
+                    android:layout_width="100dp"
+                    android:layout_height="48dp"
+                    android:layout_marginBottom="25dp"
+                    android:ems="10"
+                    android:hint="일"
+                    android:inputType="textPersonName"
+                    android:text=""
+                    app:layout_constraintRight_toRightOf="@id/day"
+                    app:layout_constraintTop_toBottomOf="@id/birth" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/ID"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="1dp"
+                android:text="아이디"
+                android:textColor="@color/design_default_color_primary_variant"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                app:layout_constraintTop_toBottomOf="@id/year" />
+
+            <EditText
+                android:id="@+id/input_ID"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:layout_marginBottom="25dp"
+                android:ems="10"
+                android:hint="아이디"
+                android:inputType="textPersonName"
+                android:text=""
+                app:layout_constrainTop_toBottomOf="@id/ID" />
+
+            <TextView
+                android:id="@+id/password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="1dp"
+                android:text="비밀번호"
+                android:textColor="@color/design_default_color_primary_variant"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                app:layout_constraintTop_toBottomOf="@id/input_ID" />
+
+            <EditText
+                android:id="@+id/input_password"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:layout_marginBottom="25dp"
+                android:ems="10"
+                android:hint="비밀번호"
+                android:inputType="textPersonName"
+                android:text=""
+                app:layout_constrainTop_toBottomOf="@id/password" />
+
+            <TextView
+                android:id="@+id/re_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="1dp"
+                android:text="비밀번호 재확인"
+                android:textColor="@color/design_default_color_primary_variant"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                app:layout_constraintTop_toBottomOf="@id/input_password" />
+
+            <EditText
+                android:id="@+id/input_re_password"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:layout_marginBottom="25dp"
+                android:ems="10"
+                android:hint="비밀번호 다시 입력"
+                android:inputType="textPersonName"
+                android:text=""
+                app:layout_constrainTop_toBottomOf="@id/re_password" />
+
+            <TextView
+                android:id="@+id/Email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="1dp"
+                android:text="이메일"
+                android:textColor="@color/design_default_color_primary_variant"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                app:layout_constraintTop_toBottomOf="@id/input_re_password" />
+
+            <EditText
+                android:id="@+id/input_email"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:layout_marginBottom="5dp"
+                android:ems="10"
+                android:hint="이메일"
+                android:inputType="textPersonName"
+                android:text=""
+                app:layout_constrainTop_toBottomOf="@id/Email" />
+
+            <Button
+                android:id="@+id/signup_button"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:layout_gravity="right"
+                android:text="회원가입"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
