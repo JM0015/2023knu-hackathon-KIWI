@@ -12,6 +12,8 @@ class MainActivity : AppCompatActivity() {
         val binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        startActivity(Intent(this, noticeActivity::class.java))
+        //startActivity(Intent(this, noticeActivity::class.java))
+        startActivity(Intent(this, MyPageActivity::class.java))
+        //startActivity(Intent(this, loginActivity::class.java))
     }
 }

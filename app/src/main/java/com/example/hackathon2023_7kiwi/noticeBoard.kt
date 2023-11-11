@@ -9,6 +9,7 @@ import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.RecyclerView.ViewHolder
 import com.example.hackathon2023_7kiwi.databinding.ActivityNoticeBoardBinding
 import com.example.hackathon2023_7kiwi.databinding.ItemMainBinding
+import com.example.hackathon2023_7kiwi.dto.Datum
 
 val dataList = mutableListOf<Datum>()
 
