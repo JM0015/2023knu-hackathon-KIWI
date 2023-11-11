@@ -13,10 +13,7 @@
         android:theme="@style/Theme.Hackathon20237kiwi"
         tools:targetApi="31">
         <activity
-            android:name=".signupActivity"
-            android:exported="false" />
-        <activity
-            android:name=".loginActivity"
+            android:name=".noticeActivity"
             android:exported="false" />
         <activity
             android:name=".MainActivity"
