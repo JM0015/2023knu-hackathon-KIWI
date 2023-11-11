@@ -7,14 +7,14 @@
 
     <TextView
         android:id="@+id/index"
-        android:layout_width="0dp"
+        android:layout_width="50dp"
         android:layout_height="match_parent"
         android:layout_weight="1"
         android:gravity="center_horizontal|center_vertical"
         android:text="num" />
 
     <LinearLayout
-        android:layout_width="0dp"
+        android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="6"
         android:orientation="vertical">
@@ -25,7 +25,8 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:textSize="18sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:text="제목"/>
 
         <TextView
             android:id="@+id/item_content"
