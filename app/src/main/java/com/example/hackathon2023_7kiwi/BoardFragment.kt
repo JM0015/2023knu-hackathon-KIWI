@@ -1,5 +1,6 @@
 package com.example.hackathon2023_7kiwi
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -43,6 +44,9 @@ class BoardFragment : Fragment() {
 
         binding.recyclerView.layoutManager = LinearLayoutManager(context)
 
+        binding.additionBtn.setOnClickListener {
+            startActivity(Intent(context, writingBoardActivity::class.java))
+        }
         // 바인딩 객체의 root를 반환합니다.
         return binding.root
     }
