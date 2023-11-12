@@ -1,10 +1,9 @@
-package com.example.hackathon2023_7kiwi
+package com.example.hackathon2023_7kiwi.adapter
 
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.example.hackathon2023_7kiwi.databinding.ActivityNoticeBinding
 import com.example.hackathon2023_7kiwi.databinding.NoticeItemMainBinding
 import com.example.hackathon2023_7kiwi.dto.NoticeData
 
@@ -17,7 +16,7 @@ class NoticeAdapter(val noticeList: MutableList<NoticeData>): RecyclerView.Adapt
         Log.d("song", "onBindViewHolder : $position")
         val binding = (holder as NoticeViewHolder).binding
 
-        //binding.noticeItemImg.setImageResource(noticeList[position].img)
+        binding.noticeItemImg.setImageResource(noticeList[position].img)
         binding.noticeItemTitleData.text = noticeList[position].title
         binding.noticeItemContextData.text = noticeList[position].context
 

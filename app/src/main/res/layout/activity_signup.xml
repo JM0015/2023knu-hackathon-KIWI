@@ -20,7 +20,7 @@
             android:baselineAligned="true" >
 
             <Button
-                android:id="@+id/back"
+                android:id="@+id/signInBackBtn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="back"
@@ -34,7 +34,7 @@
                 android:text="            회원가입"
                 android:textColor="@color/design_default_color_primary_variant"
                 android:textSize="25dp"
-                app:layout_constraintRight_toLeftOf="@id/back"
+                app:layout_constraintRight_toLeftOf="@id/signInBackBtn"
                 tools:ignore="MissingConstraints" />
 
         </LinearLayout>
@@ -57,7 +57,7 @@
                 android:textColor="@color/design_default_color_primary_variant"
                 android:textSize="20dp"
                 android:textStyle="bold"
-                app:layout_constraintTop_toBottomOf="@id/signup" />
+                android:layout_below="@id/signup" />
 
             <EditText
                 android:id="@+id/input_name"
@@ -68,7 +68,7 @@
                 android:hint="이름"
                 android:inputType="textPersonName"
                 android:text=""
-                app:layout_constrainTop_toBottomOf="@id/name" />
+                android:layout_below="@id/name" />
 
             <TextView
                 android:id="@+id/birth"
@@ -79,7 +79,7 @@
                 android:textColor="@color/design_default_color_primary_variant"
                 android:textSize="20dp"
                 android:textStyle="bold"
-                app:layout_constraintTop_toBottomOf="@id/input_name" />
+                android:layout_below="@id/input_name" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -96,7 +96,7 @@
                     android:hint="년(4자)"
                     android:inputType="textPersonName"
                     android:text=""
-                    app:layout_constraintTop_toBottomOf="@id/birth" />
+                    android:layout_below="@id/birth" />
 
                 <EditText
                     android:id="@+id/month"
@@ -108,8 +108,8 @@
                     android:hint="월"
                     android:inputType="textPersonName"
                     android:text=""
-                    app:layout_constraintRight_toRightOf="@id/year"
-                    app:layout_constraintTop_toBottomOf="@id/birth" />
+                    android:layout_toRightOf="@id/year"
+                    android:layout_below="@id/birth" />
 
                 <EditText
                     android:id="@+id/day"
@@ -120,8 +120,8 @@
                     android:hint="일"
                     android:inputType="textPersonName"
                     android:text=""
-                    app:layout_constraintRight_toRightOf="@id/day"
-                    app:layout_constraintTop_toBottomOf="@id/birth" />
+                    android:layout_toRightOf="@id/day"
+                    android:layout_below="@id/birth" />
 
             </LinearLayout>
 
@@ -134,7 +134,7 @@
                 android:textColor="@color/design_default_color_primary_variant"
                 android:textSize="20dp"
                 android:textStyle="bold"
-                app:layout_constraintTop_toBottomOf="@id/year" />
+                android:layout_below="@id/year" />
 
             <EditText
                 android:id="@+id/input_ID"
@@ -145,7 +145,7 @@
                 android:hint="아이디"
                 android:inputType="textPersonName"
                 android:text=""
-                app:layout_constrainTop_toBottomOf="@id/ID" />
+                android:layout_below="@id/ID" />
 
             <TextView
                 android:id="@+id/password"
@@ -156,7 +156,7 @@
                 android:textColor="@color/design_default_color_primary_variant"
                 android:textSize="20dp"
                 android:textStyle="bold"
-                app:layout_constraintTop_toBottomOf="@id/input_ID" />
+                android:layout_below="@id/input_ID" />
 
             <EditText
                 android:id="@+id/input_password"
@@ -167,7 +167,7 @@
                 android:hint="비밀번호"
                 android:inputType="textPersonName"
                 android:text=""
-                app:layout_constrainTop_toBottomOf="@id/password" />
+                android:layout_below="@id/password" />
 
             <TextView
                 android:id="@+id/re_password"
@@ -178,7 +178,7 @@
                 android:textColor="@color/design_default_color_primary_variant"
                 android:textSize="20dp"
                 android:textStyle="bold"
-                app:layout_constraintTop_toBottomOf="@id/input_password" />
+                android:layout_below="@id/input_password" />
 
             <EditText
                 android:id="@+id/input_re_password"
@@ -189,7 +189,7 @@
                 android:hint="비밀번호 다시 입력"
                 android:inputType="textPersonName"
                 android:text=""
-                app:layout_constrainTop_toBottomOf="@id/re_password" />
+                android:layout_below="@id/re_password" />
 
             <TextView
                 android:id="@+id/Email"
@@ -200,7 +200,7 @@
                 android:textColor="@color/design_default_color_primary_variant"
                 android:textSize="20dp"
                 android:textStyle="bold"
-                app:layout_constraintTop_toBottomOf="@id/input_re_password" />
+                android:layout_below="@id/input_re_password" />
 
             <EditText
                 android:id="@+id/input_email"
@@ -211,7 +211,7 @@
                 android:hint="이메일"
                 android:inputType="textPersonName"
                 android:text=""
-                app:layout_constrainTop_toBottomOf="@id/Email" />
+                android:layout_below="@id/Email" />
 
             <Button
                 android:id="@+id/signup_button"

@@ -1,19 +1,24 @@
 package com.example.hackathon2023_7kiwi
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.hackathon2023_7kiwi.adapter.BoardAdapter
-import com.example.hackathon2023_7kiwi.databinding.ActivityNoticeBoardBinding
-import com.example.hackathon2023_7kiwi.dto.Datum
+import com.example.hackathon2023_7kiwi.databinding.ActivityMyPageBinding
 
+// TODO: Rename parameter arguments, choose names that match
+// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
 private const val ARG_PARAM1 = "param1"
 private const val ARG_PARAM2 = "param2"
 
-class BoardFragment : Fragment() {
+/**
+ * A simple [Fragment] subclass.
+ * Use the [MyPageFragment.newInstance] factory method to
+ * create an instance of this fragment.
+ */
+class MyPageFragment : Fragment() {
     // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
@@ -30,18 +35,17 @@ class BoardFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+        // Inflate the layout for this fragment
+//        return inflater.inflate(R.layout.fragment_my_page, container, false)
+        //return inflater.inflate(R.layout.activity_my_page, container, false)
         // 레이아웃을 인플레이트하고 바인딩 객체를 생성합니다.
-        val binding = ActivityNoticeBoardBinding.inflate(inflater, container, false)
+        val binding = ActivityMyPageBinding.inflate(inflater, container, false)
 
-        val dataList = mutableListOf<Datum>()
-        for (i in 1..10) {
-            dataList.add(Datum("${i}", "title ${i}", "content ${i}"))
+        // 로그인 버튼에 클릭 리스너를 설정합니다.
+        binding.mypageLoginbtn.setOnClickListener() {
+            val intent = Intent(context, loginActivity::class.java)
+            startActivity(intent)
         }
-
-        val boardAdapter = BoardAdapter(dataList)
-        binding.recyclerView.adapter = boardAdapter
-
-        binding.recyclerView.layoutManager = LinearLayoutManager(context)
 
         // 바인딩 객체의 root를 반환합니다.
         return binding.root
@@ -54,12 +58,12 @@ class BoardFragment : Fragment() {
          *
          * @param param1 Parameter 1.
          * @param param2 Parameter 2.
-         * @return A new instance of fragment BoardFragment.
+         * @return A new instance of fragment MyPageFragment.
          */
         // TODO: Rename and change types and number of parameters
         @JvmStatic
         fun newInstance(param1: String, param2: String) =
-            BoardFragment().apply {
+            MyPageFragment().apply {
                 arguments = Bundle().apply {
                     putString(ARG_PARAM1, param1)
                     putString(ARG_PARAM2, param2)

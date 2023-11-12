@@ -3,18 +3,18 @@ package com.example.hackathon2023_7kiwi
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.example.hackathon2023_7kiwi.databinding.ActivitySignupBinding
+import android.widget.AdapterView
+import com.example.hackathon2023_7kiwi.databinding.ActivityMyPageBinding
 
-class signupActivity : AppCompatActivity() {
+class MyPageActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        val binding = ActivitySignupBinding.inflate(layoutInflater)
+        val binding = ActivityMyPageBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        binding.signInBackBtn.setOnClickListener() {
+        binding.mypageLoginbtn.setOnClickListener() {
             val intent = Intent(this, loginActivity::class.java)
             startActivity(intent)
         }
-
     }
 }
