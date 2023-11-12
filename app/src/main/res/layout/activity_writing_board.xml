@@ -6,7 +6,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".loginActivity">
+    tools:context=".writingBoardActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -53,7 +53,7 @@
             android:inputType="textShortMessage"
             android:minHeight="48dp"
             android:text=""
-            app:layout_constraintTop_toBotttomOf="@id/writing"
+            android:layout_below="@id/writing"
             tools:ignore="MissingConstraints" />
 
         <TextView
@@ -64,7 +64,7 @@
             android:layout_gravity="center"
             android:text="_________________________________________________"
             android:textStyle="italic"
-            app:layout_constrainTop_toBottomOf="@id/w_title" />
+            android:layout_below="@id/w_title" />
 
 
         <EditText
