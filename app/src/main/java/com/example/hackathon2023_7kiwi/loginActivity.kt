@@ -15,5 +15,10 @@ class loginActivity : AppCompatActivity() {
             val intent = Intent(this, signupActivity::class.java)
             startActivity(intent)
         }
+
+        binding.loginBackBtn.setOnClickListener() {
+            val intent = Intent(this, MyPageFragment::class.java)
+            startActivity(intent)
+        }
     }
 }

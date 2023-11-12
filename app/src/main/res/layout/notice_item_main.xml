@@ -8,7 +8,7 @@
 
     <ImageView
         android:id="@+id/noticeItemImg"
-        android:src="@drawable/cat"
+        android:src="@drawable/ic_person"
         android:layout_width="60dp"
         android:layout_height="60dp"
         android:layout_gravity="center"/>

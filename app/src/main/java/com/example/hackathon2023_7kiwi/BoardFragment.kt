@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.hackathon2023_7kiwi.adapter.BoardAdapter
 import com.example.hackathon2023_7kiwi.databinding.ActivityNoticeBoardBinding
+import com.example.hackathon2023_7kiwi.databinding.FragmentBoardBinding
 import com.example.hackathon2023_7kiwi.dto.Datum
 
 private const val ARG_PARAM1 = "param1"
@@ -31,7 +32,7 @@ class BoardFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // 레이아웃을 인플레이트하고 바인딩 객체를 생성합니다.
-        val binding = ActivityNoticeBoardBinding.inflate(inflater, container, false)
+        val binding = FragmentBoardBinding.inflate(inflater, container, false)
 
         val dataList = mutableListOf<Datum>()
         for (i in 1..10) {
