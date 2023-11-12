@@ -15,6 +15,9 @@
         <activity
             android:name=".writingBoardActivity"
             android:exported="false" />
+      <activity
+            android:name=".MainActivity"
+            android:exported="false" />
         <activity
             android:name=".signupActivity"
             android:exported="false" />
@@ -31,7 +34,7 @@
             android:name=".noticeActivity"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".NaviActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

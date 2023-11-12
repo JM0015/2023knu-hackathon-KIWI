@@ -30,7 +30,6 @@ class noticeActivity : AppCompatActivity() {
         binding.noticeRecyclerView.layoutManager = LinearLayoutManager(this)
         binding.noticeRecyclerView.adapter = NoticeAdapter(noticeList)
 
-        Log.d("song", "onCreate")
         //binding.noticeRecyclerView.addItemDecoration(DividerItemDecoration(this, LinearLayoutManager.VERTICAL))
 //        binding.addBtn.setOnClickListener {
 //            noticeList.add(NoticeData("new"))
