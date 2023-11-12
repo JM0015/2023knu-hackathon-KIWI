@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.RecyclerView.ViewHolder
+import com.example.hackathon2023_7kiwi.adapter.BoardAdapter
 import com.example.hackathon2023_7kiwi.databinding.ActivityNoticeBoardBinding
 import com.example.hackathon2023_7kiwi.databinding.ItemMainBinding
 import com.example.hackathon2023_7kiwi.dto.Datum
@@ -37,7 +38,7 @@ class noticeBoard : AppCompatActivity() {
             // 1. 데이터를 불러온다
             //val data = dataList
             // 2. adapter 를 생성
-            val customAdapter = CustomAdapter(dataList)
+            val customAdapter = BoardAdapter(dataList)
             // 3. 화면의 RecyclerView 와 연결
             binding.recyclerView.adapter = customAdapter
             // 4. 레이아웃 매니저 설정

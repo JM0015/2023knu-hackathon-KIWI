@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.hackathon2023_7kiwi.adapter.BoardAdapter
 import com.example.hackathon2023_7kiwi.databinding.ActivityNoticeBoardBinding
 import com.example.hackathon2023_7kiwi.dto.Datum
 
@@ -50,7 +51,7 @@ class BoardFragment : Fragment() {
             dataList.add(i, data)
         }
 
-        val customAdapter = CustomAdapter(dataList)
+        val customAdapter = BoardAdapter(dataList)
         binding.recyclerView.adapter = customAdapter
         binding.recyclerView.layoutManager = LinearLayoutManager(context)
 
