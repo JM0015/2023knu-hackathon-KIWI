@@ -3,14 +3,14 @@
     xmlns:andriod="http://schemas.android.com/apk/res-auto"
     android:id="@+id/item_root"
     android:layout_width="match_parent"
-    android:layout_height="100dp">
+    android:layout_height="wrap_content">
 
     <TextView
         android:id="@+id/index"
-        android:layout_width="50dp"
-        android:layout_height="match_parent"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
         android:layout_weight="1"
-        android:gravity="center_horizontal|center_vertical"
+        android:gravity="center"
         android:text="num" />
 
     <LinearLayout
@@ -21,18 +21,20 @@
 
         <TextView
             android:id="@+id/item_title"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
             android:layout_weight="1"
             android:textSize="18sp"
             android:textStyle="bold"
+            android:paddingTop="8dp"
             android:text="제목"/>
 
         <TextView
             android:id="@+id/item_content"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
             android:layout_weight="1"
+            android:paddingBottom="8dp"
             android:text="자세한 설명" />
 
     </LinearLayout>
