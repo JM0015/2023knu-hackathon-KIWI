@@ -17,7 +17,7 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="0dp"
+        android:layout_height="6dp"
         android:layout_marginLeft="2.5dp"
         android:layout_marginRight="2.5dp"
         android:layout_weight="1"
@@ -55,8 +55,8 @@
         android:id="@+id/button7"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginRight="10dp"
-        android:layout_marginBottom="10dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="90dp"
         android:gravity="center"
         android:text="+"
         android:textSize="15dp" />
