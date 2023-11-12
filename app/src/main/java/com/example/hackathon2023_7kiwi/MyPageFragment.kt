@@ -7,6 +7,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.example.hackathon2023_7kiwi.databinding.ActivityMyPageBinding
+import com.example.hackathon2023_7kiwi.databinding.FragmentMyPageBinding
+import com.example.hackathon2023_7kiwi.databinding.FragmentNoticeBinding
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -39,15 +41,13 @@ class MyPageFragment : Fragment() {
 //        return inflater.inflate(R.layout.fragment_my_page, container, false)
         //return inflater.inflate(R.layout.activity_my_page, container, false)
         // 레이아웃을 인플레이트하고 바인딩 객체를 생성합니다.
-        val binding = ActivityMyPageBinding.inflate(inflater, container, false)
+        val binding = FragmentMyPageBinding.inflate(inflater, container, false)
 
-        // 로그인 버튼에 클릭 리스너를 설정합니다.
         binding.mypageLoginbtn.setOnClickListener() {
             val intent = Intent(context, loginActivity::class.java)
             startActivity(intent)
         }
 
-        // 바인딩 객체의 root를 반환합니다.
         return binding.root
     }
 

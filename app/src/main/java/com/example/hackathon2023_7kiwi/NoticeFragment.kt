@@ -43,12 +43,12 @@ class NoticeFragment : Fragment() {
 //        val binding = ActivityNoticeBinding.inflate(inflater, container, false)
 
 //        return binding.root
-        val binding = ActivityNoticeBinding.inflate(inflater, container, false)
+        val binding = FragmentNoticeBinding.inflate(inflater, container, false)
 
         var noticeList = mutableListOf<NoticeData>()
-        noticeList.add(NoticeData(R.drawable.cat, "홍길동1", "hi"))
-        noticeList.add(NoticeData(R.drawable.cat, "홍길동2", "hi"))
-        noticeList.add(NoticeData(R.drawable.cat, "홍길동3", "hi"))
+        noticeList.add(NoticeData(R.drawable.knulogo, "경북대학교", "논문작성법 특강 안내"))
+        noticeList.add(NoticeData(R.drawable.knulogo, "경북대학교", "학습전략검사 운영 안내"))
+        noticeList.add(NoticeData(R.drawable.knulogo, "경북대학교", "학습컨설팅 안내"))
 
         binding.noticeRecyclerView.layoutManager = LinearLayoutManager(context)
         binding.noticeRecyclerView.adapter = NoticeAdapter(noticeList)

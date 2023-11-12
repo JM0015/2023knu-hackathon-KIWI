@@ -8,6 +8,13 @@
     android:layout_height="match_parent"
     tools:context=".loginActivity">
 
+    <Button
+        android:id="@+id/loginBackBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="back"
+        android:textColor="@color/white"
+        android:textSize="20dp" />
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"

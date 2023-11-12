@@ -5,17 +5,17 @@ import android.os.Bundle
 
 import android.content.Intent
 import android.widget.Button
+import com.example.hackathon2023_7kiwi.databinding.ActivityWritingBoardBinding
 
 class writingBoardActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_writing_board)
+        val binding = ActivityWritingBoardBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
-        val close_button: Button = findViewById()
-
-        close_button.setOnClickListener({
-            val intent = Intent(this, MainActivity::class.java)
+        binding.closeButton.setOnClickListener() {
+            val intent = Intent(this, BoardFragment::class.java)
             startActivity(intent)
-        })
+        }
     }
 }
